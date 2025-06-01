@@ -166,6 +166,48 @@
                     ücretsizdir.</li></ul>
         </div>
     </div>
+<!-- Buton -->
+<button id="openVideoBtn">🔥 NASIL İNDİRİLİR? 🔥</button>
+
+<!-- Modal -->
+<div id="mobileVideoModal">
+  <video id="indirVideo" controls autoplay muted playsinline>
+    <source src="https://xn--cretsizgoruntulusohbet-rlc.vip/videos/nasil.mp4" type="video/mp4" />
+    Tarayıcınız bu videoyu desteklemiyor.
+  </video>
+  <button id="closeBtn" aria-label="Kapat">✕</button>
+</div>
+
+<script>
+  const openBtn = document.getElementById("openVideoBtn");
+  const modal = document.getElementById("mobileVideoModal");
+  const video = document.getElementById("indirVideo");
+  const closeBtn = document.getElementById("closeBtn");
+
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+    video.currentTime = 0;
+    video.play().catch(e => {
+      console.log("Video oynatılırken hata:", e);
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    video.pause();
+  });
+
+  // Modal dışına tıklayınca kapanma
+  modal.addEventListener("click", e => {
+    if(e.target === modal) {
+      modal.classList.remove("active");
+      video.pause();
+    }
+  });
+</script>
+
+</body>
+</html>
 
     <script>
 const videos = [
