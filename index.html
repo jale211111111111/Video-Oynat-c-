@@ -220,23 +220,26 @@
     box-shadow: 0 0 30px rgba(255,255,255,0.3);
   }
 
-  /* Kapatma butonu */
+/* Genel stil (masaüstü için) */
+#closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(220, 38, 38, 0.85);
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 8px rgba(220, 38, 38, 0.7);
+}
+
+/* Mobil cihazlar için aşağıya taşı */
+@media (max-width: 768px) {
   #closeBtn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: rgba(220, 38, 38, 0.85);
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-    padding: 0.25rem 0.6rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    box-shadow: 0 0 8px rgba(220, 38, 38, 0.7);
-  }
-  #closeBtn:hover {
-    background: rgba(220, 38, 38, 1);
+    top: 4.5rem; /* Daha aşağıya alındı */
   }
 </style>
 </head>
