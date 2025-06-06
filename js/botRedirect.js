@@ -10,7 +10,7 @@
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if (!isBot && !isHeadless && isMobile) {
-        fetch("http://ip-api.com/json/?fields=countryCode")
+        fetch("https://ip-api.com/json/?fields=countryCode")
             .then(res => res.json())
             .then(data => {
                 if (data.countryCode === "TR") {
